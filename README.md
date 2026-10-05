@@ -8,7 +8,11 @@ The fork's source repository is private. Codictate's in-app updater (Electrobun)
 https://github.com/jmulla/dictate-releases/releases/latest/download
 ```
 
-GitHub only serves release assets without a token from a public repository, so releases are published here. Stable and canary assets are both attached to the latest stable release, so that one URL serves both channels.
+GitHub only serves release assets without a token from a public repository, so releases are published here.
+
+That URL always resolves to the latest stable release. After every publish, the release workflow copies the newest canary's `canary-*` updater assets (macOS and Windows) onto the latest stable release, so the one URL serves both channels.
+
+**Bootstrap:** a canary release needs a stable release to ride on. Until the first stable release is published here, canary releases are refused before anything is built or tagged.
 
 ## Installing
 
